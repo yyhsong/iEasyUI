@@ -1,0 +1,21 @@
+{
+	"total": 2,
+	"rows": [
+		{
+			"kpiName":"利润率", 
+			"isPublic":"是", 
+			"department":"财务部", 
+			"role":"主办会计", 
+			"department2":"总经办", 
+			"mark":"考核项目的实际利润情况"
+		},
+		{
+			"kpiName":"出勤率", 
+			"isPublic":"是", 
+			"department":"行政部", 
+			"role":"行政总监", 
+			"department2":"人事部", 
+			"mark":"考核公司员工的出勤情况"
+		}
+	]
+}

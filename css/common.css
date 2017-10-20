@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/********** reset *********/
+body {font-family:"microsoft yahei";}
+ul {list-style:none;margin:0px;padding:0px;}
+a {text-decoration:none;outline:none;}
+
+.datagrid-sort-asc .datagrid-sort-icon,
+.datagrid-sort-desc .datagrid-sort-icon {padding:0px;}
+
+.tabs-panels {padding:10px;}
+
+.easyui-dialog {padding:15px 15px 15px 0px;}
+.easyui-dialog .fitem {margin-bottom:10px;}
+.easyui-dialog .fitem label {margin-left:15px;}
+.easyui-dialog .fitem .easyui-textbox {margin-right:15px;width:180px;}
+.easyui-dialog .fitem .easyui-combobox {margin-right:15px;width:185px;}
+.easyui-dialog .fitem .txt-long {width:455px;}
+
+/********** global *********/
+#header {height:70px;overflow:hidden;}
+#header .logo {display:block;margin:5px;height:60px;}
+#header .top-btns {position:absolute;top:20px;right:15px;}
+#header .top-btns span {vertical-align:middle;}
+#header .top-btns .easyui-combobox {width:80px;}
+
+#naver {width:220px;}
+#navmenu {border:none;}
+.navmenu {margin-top:5px;}
+.navmenu li {margin:10px 15px;}
+.navmenu li a {
+	display:block;
+	height:32px;
+	line-height:32px;
+	padding-left:36px;
+	font-size:14px;
+	font-weight:bold;
+	color:#333;
+	border:1px solid #fff;
+	background-repeat:no-repeat;
+	background-position:10px center;
+	background-image:url("../img/item-default.png");
+}
+.navmenu li.active a,
+.navmenu li a:hover {color:#1542a4;background-color:#e0ecff;border-color:#99bbe8;}
+
+#content {border:none;}
+.inner-header {padding:0px 0px 10px 0px;border:none;}
+.inner-header a {margin-right:3px;}
+.tree-div {width:240px;border:none;border-top:1px solid #95B8E7;}
+.tree-div .easyui-tree {margin:10px;}
+.inner-content {padding-left:15px;border:none;}
+.inner-content .datagrid {border-top:1px solid #95B8E7;}
+
+#footer {height:35px;line-height:28px;text-align:center;font-weight:bold;color:#1542a4;background:#d2e0f2;overflow:hidden;}
+
+.toolbar {}
+.toolbar .search-div {padding:10px 0px;background:#fff;}
+.toolbar .ctrl-div {padding:3px 0px;border-top:1px solid #ddd;}
+.toolbar .search-div label {margin-left:10px;vertical-align:middle;}
+.toolbar .search-div .easyui-textbox,
+.toolbar .search-div .easyui-combobox {width:120px;}
+
+/* flow-panel */
+.flow-panel {padding:10px;}
+.flow-sel .easyui-combobox {width:120px;}
+.flow-div {margin:10px 0px;}
+.flow-t {table-layout:fixed;border-collapse:collapse;width:100%;}
+.flow-t td {text-align:center;}
+.flow-t .arrow-right {width:50px;background:url("../img/arrow-right.png") no-repeat center center;}
+.flow-t .arrow-right.finished {background-image:url("../img/arrow-right-active.png");}
+.flow-t .arrow-left {width:50px;background:url("../img/arrow-left.png") no-repeat center center;}
+.flow-t .arrow-left.finished {background-image:url("../img/arrow-left-active.png");}
+.flow-t .arrow-down {height:50px;background:url("../img/arrow-down.png") no-repeat center center;}
+.flow-t .arrow-down.finished {background-image:url("../img/arrow-down-active.png");}
+.flow-node {
+	display:block;
+	padding:10px 0px;
+	text-align:center;
+	text-decoration:none;
+	font-size:14px;
+	color:#000;
+	background-color:#ddd;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+.flow-node.finished {background-color:#ffe48d;border-color:#ffcc99;}
+.flow-node.active {font-weight:bold;color:#fff;background-color:#ff6600;border-color:#ff3300;}
+.flow-todo {padding:10px;background-color:#FFFFCC;}
+.flow-todo:after {
+	display:table;
+	content:" ";
+	clear:both;
+}
+.flow-todo .todo-list {list-style:none;border-top:1px dashed #ccc;}
+.flow-todo .todo-list li {
+	float:left;
+	width:48%;
+	height:36px;
+	line-height:36px;
+	font-size:14px;
+	border-bottom:1px dashed #ccc;
+}
+.flow-todo .todo-list li .num {
+	display:inline-block;
+	margin-left:15px;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	text-decoration:none;
+	font-size:12px;
+	color:#fff;
+	background-color:#ec0000;
+	border-radius:50%;
+}
+.notice-list li {
+	list-style:none;
+	position:relative;
+	padding:5px 100px 5px 10px;
+	line-height:1.8em;
+	font-size:14px;
+	color:#333;
+	border-bottom:1px solid #ccc;
+}
+.notice-list li .date {
+	position:absolute;
+	top:5px;
+	right:5px;
+	padding:0px 5px;
+	font-size:12px;
+	color:#fff;
+	background-color:#999;
+	border-radius:3px;
+}
+
+
+
+
+
+
+

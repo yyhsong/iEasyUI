@@ -1,0 +1,109 @@
+<!-- 指标库列表 -->
+
+<!-- 数据表 -->
+<table class="easyui-datagrid" title="指标库列表" fit="true" fitColumns="true"
+	url="data/griddata.json" method="get" toolbar="#toolbar" 
+	striped="true" rownumbers="true" pagination="true" remoteSort="false">
+	<thead>
+		<tr>
+			<th field="kpiName" width="20" align="center" sortable="true">指标名称</th>
+			<th field="isPublic" width="10" align="center" sortable="true">是否公用</th>
+			<th field="department" width="15" align="center" sortable="true">维护部门</th>
+			<th field="role" width="15" align="center" sortable="true">维护角色</th>
+			<th field="department2" width="15" align="center" sortable="true">审核部门</th>
+			<th field="mark" width="25">备注说明</th>
+		</tr>
+	</thead>
+</table>
+<!-- /数据表 -->
+
+<!-- 数据表工具栏 -->
+<div class="toolbar" id="toolbar">
+	<div class="search-div">
+		<label>指标名称：</label>
+		<input type="text" class="easyui-textbox"  />
+		<label>是否公用：</label>
+		<select class="easyui-combobox" data-options="editable:false">
+			<option value="0">是</option>
+			<option value="1">否</option>
+		</select>
+		<label>是否自定义：</label>
+		<select class="easyui-combobox" data-options="editable:false">
+			<option value="0">是</option>
+			<option value="1">否</option>
+		</select>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search">搜索</a>
+    </div>
+	<div class="ctrl-div">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" id="addBtn">新增</a>
+   		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" id="editBtn">编辑</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">批量删除</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-print" plain="true">打印</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-back" plain="true">导入</a>
+    	<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true">导出</a>
+	</div>
+</div>
+<!-- /数据表工具栏 -->
+
+<!-- 弹出框 -->
+<div class="easyui-dialog" title="新增/编辑" iconCls="icon-save" modal="true"
+	closed="true" buttons="#dlg-btns" id="dlg">
+	<form id="fm" method="post">
+		<div class="fitem">
+			<label>指标名称：</label>
+			<input class="easyui-textbox" value="利润率" />
+			<label>是否公用：</label>
+			<select class="easyui-combobox">
+				<option value="0">是</option>
+				<option value="1">否</option>
+			</select>
+		</div>
+		<div class="fitem">
+			<label>维护部门：</label>
+			<select class="easyui-combobox">
+				<option value="">财务部</option>
+				<option value="">人事部</option>
+			</select>
+			<label>维护角色：</label>
+			<select class="easyui-combobox">
+				<option value="0">主办会计</option>
+				<option value="1">行政总监</option>
+				<option value="2">总经理</option>
+			</select>
+		</div>
+		<div class="fitem">
+			<label>审核部门：</label>
+			<select class="easyui-combobox">
+				<option value="">总经办</option>
+				<option value="">行政部</option>
+			</select>
+		</div>
+		<div class="fitem">
+			<label>备注说明：</label>
+			<input class="easyui-textbox" multiline="true" style="width:452px;height:52px;" value="考核项目的实际利润情况"  />
+		</div>
+	</form>
+</div>
+<!-- /弹出框 -->
+
+<!-- 弹出框按钮组-->
+<div id="dlg-btns">
+	<a href="#" class="easyui-linkbutton" iconCls="icon-ok" id="saveBtn">保存</a>
+	<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" id="cancelBtn">取消</a>
+</div>
+<!-- /弹出框 按钮组-->
+
+<script type="text/javascript">
+	$(function() {
+		//打开弹出框
+		$("#addBtn, #editBtn").click(function(e) {
+			e.preventDefault();
+			$("#dlg").dialog("open");
+		});
+		//关闭弹出框
+		$("#saveBtn, #cancelBtn").click(function(e) {
+			e.preventDefault();
+			$("#dlg").dialog("close");
+		});
+	});
+</script>
