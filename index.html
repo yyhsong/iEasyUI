@@ -8,8 +8,11 @@
 		<link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css" />
 	    <link rel="stylesheet" type="text/css" href="css/themes/icon.css" />
 	    <link rel="stylesheet" type="text/css" href="css/common.css" />
+	    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
 	</head>
-	<body class="easyui-layout">
+	<body class="easyui-layout" id="layout" style="visibility:hidden;">
 		
 		<div region="north" id="header">
 			<img src="img/logo.png" class="logo" />
@@ -113,9 +116,6 @@
 		
 		<div region="south" id="footer">某某后台管理系统 V1.0</div>
 		
-		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-		<script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				//添加新的Tab页
@@ -133,10 +133,14 @@
 							closable: true
 						});
 					}
-					
 					$("#navmenu .active").removeClass("active");
 					$(this).parent().addClass("active");
 				});
+				
+				//解决闪屏的问题
+				window.setTimeout(function() {
+					$("#layout").css("visibility", "visible");
+				}, 600);
 			});
 		</script>
 	</body>
